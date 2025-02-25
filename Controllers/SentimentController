@@ -1,0 +1,31 @@
+using dotnet9SentimentApi.Models;
+using dotnet9SentimentApi.Services;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace dotnet9SentimentApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SentimentController : ControllerBase
+    {
+        private readonly SentimentModelTrainer _modelTrainer;
+
+        public SentimentController(SentimentModelTrainer modelTrainer)
+        {
+            _modelTrainer = modelTrainer;
+        }
+
+        [HttpPost("analyze")]
+        public ActionResult<SentimentPrediction> AnalyzeSentiment([FromBody] SentimentData input)
+        {
+            if (string.IsNullOrEmpty(input.Text))
+                return BadRequest("Text cannot be empty.");
+
+            var prediction = _modelTrainer.Predict(input.Text);
+            var sentiment = prediction.Prediction ? "Positive" : "Negative";
+            //var confidence = prediction.Prediction ? prediction.Probability : 1 - prediction.Probability; // Adjust confidence for positive/negative
+            return Ok(new { Sentiment = sentiment, Confidence = prediction.Probability });
+        }
+    }
+}

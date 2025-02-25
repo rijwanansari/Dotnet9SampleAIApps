@@ -1,0 +1,14 @@
+@dotnet9SentimentApi_HostAddress = http://localhost:5288
+
+GET {{dotnet9SentimentApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# post analyze sentiment
+POST {{dotnet9SentimentApi_HostAddress}}/api/sentiment/analyze
+Content-Type: application/json
+
+{
+  "text": "I am not happy with the result!"
+}
