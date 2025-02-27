@@ -26,12 +26,12 @@ public class AnomalyDetectionTrainer
        var pipeline = _mlContext.Transforms.DetectIidSpike(
                 outputColumnName: "Prediction",
                 inputColumnName: nameof(LogData.ErrorCount),
-                confidence: 95,
+                confidence: 95.0, // Double instead of int
                 pvalueHistoryLength: 5
             );
 
         // Train the model
-        var model = pipeline.Fit(dataView);
+        _model = pipeline.Fit(dataView);
         
     }
 
@@ -41,12 +41,15 @@ public class AnomalyDetectionTrainer
             var transformedData = _model.Transform(dataView);
             var predictions = _mlContext.Data.CreateEnumerable<AnomalyPrediction>(transformedData, reuseRowObject: false);
 
+            // Use p-value threshold since Prediction[0] might be unreliable
+            const double pValueThreshold = 0.05; // 5%
+
             return logs.Zip(predictions, (log, pred) => new AnomalyResult
             {
                 Timestamp = log.Timestamp,
                 ErrorCount = log.ErrorCount,
-                IsAnomaly = pred.Prediction[0] == 1,
-                ConfidenceScore = pred.Prediction[1]
+                IsAnomaly = pred.Prediction[2] < pValueThreshold,
+                ConfidenceScore =  pred.Prediction[2] < pValueThreshold ? 1- pred.Prediction[2] : pred.Prediction[2]
             }).ToList();
         }
 

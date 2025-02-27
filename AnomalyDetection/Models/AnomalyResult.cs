@@ -2,7 +2,7 @@ using System;
 
 namespace AnomalyDetection.Models;
 
-public class AnomalyResult
+public record AnomalyResult
 {
     public DateTime Timestamp { get; set; }
     public float ErrorCount { get; set; }

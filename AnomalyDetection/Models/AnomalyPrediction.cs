@@ -3,7 +3,7 @@ using Microsoft.ML.Data;
 
 namespace AnomalyDetection.Models;
 
-public class AnomalyPrediction
+public record AnomalyPrediction
 {
     [VectorType(3)]
     public double[] Prediction { get; set; } =  [];
