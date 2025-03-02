@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet9SentimentApi", "dotn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyDetection", "AnomalyDetection\AnomalyDetection.csproj", "{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserBehaviorPredictio", "UserBehaviorPredictio\UserBehaviorPredictio.csproj", "{D9042291-94D1-4E56-A5C1-0B3A9E46E763}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
