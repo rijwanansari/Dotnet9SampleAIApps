@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -6,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet9SentimentApi", "dotn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyDetection", "AnomalyDetection\AnomalyDetection.csproj", "{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserBehaviorPredictio", "UserBehaviorPredictio\UserBehaviorPredictio.csproj", "{D9042291-94D1-4E56-A5C1-0B3A9E46E763}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserBehaviorPrediction", "UserBehaviorPrediction", "{95C4AE2B-545B-949C-7842-D6504EBF890D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +23,6 @@ Global
 		{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E9BEB5-2853-4B0B-9824-CE7998E4ADEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9042291-94D1-4E56-A5C1-0B3A9E46E763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
