@@ -20,6 +20,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+//map the controller
+app.MapControllers();
+
 
 var summaries = new[]
 {

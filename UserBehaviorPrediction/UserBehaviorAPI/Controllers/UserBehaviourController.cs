@@ -7,11 +7,10 @@ namespace UserBehaviorAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserBehaviourContoller : ControllerBase
+    public class UserBehaviourController : ControllerBase
     {
         //api to train the model
-        [HttpPost]
-        [Route("TrainModel")]
+        [HttpGet("train")]
         public IActionResult TrainModel()
         {
             var userBehaviorModelTrainer = new UserBehaviorModelTrainer();
@@ -20,9 +19,8 @@ namespace UserBehaviorAPI.Controllers
         }
 
         //api to predict if a user will click on an ad
-        [HttpPost]
-        [Route("Predict")]
-        public IActionResult Predict(UserBehaviorData userBehaviorData)
+        [HttpPost("predict")]
+        public IActionResult Predict([FromBody]UserBehaviorData userBehaviorData)
         {
             var userBehaviorModelPrediction = new UserBehaviorModelPrediction();
             var prediction = userBehaviorModelPrediction.Predict(userBehaviorData);

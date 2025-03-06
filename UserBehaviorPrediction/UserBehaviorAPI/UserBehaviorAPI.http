@@ -4,3 +4,25 @@ GET {{UserBehaviorAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+# This HTTP request is used to initiate the training process for user behavior prediction.
+# It sends a GET request to the /api/userbehaviour/train endpoint of the UserBehaviorAPI.
+# The request expects a JSON response.
+GET {{UserBehaviorAPI_HostAddress}}/api/userbehaviour/train
+Accept: application/json
+
+###
+
+# This HTTP request is used to predict the user behavior based on the provided input data.
+# It sends a POST request to the /api/userbehaviour/predict endpoint of the UserBehaviorAPI.
+# The request body contains the input data in JSON format.
+POST {{UserBehaviorAPI_HostAddress}}/api/userbehaviour/predict
+Content-Type: application/json
+
+{
+    "UserId": 1,
+    "Age": 30,
+    "PageViews": 15,
+    "TimeSpent": 120,
+    "ClickedAd": false
+}

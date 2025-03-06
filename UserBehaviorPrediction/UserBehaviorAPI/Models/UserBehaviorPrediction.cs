@@ -3,10 +3,10 @@ using Microsoft.ML.Data;
 
 namespace UserBehaviorAPI.Models;
 
-public class UserBehaviorPrediction
+public record UserBehaviorPrediction
 {
     [ColumnName("PredictedLabel")] 
-    public bool Prediction;
-    public float Probability;
+    public bool Prediction { get; set; }
+    public float Probability { get; set; }
 
 }

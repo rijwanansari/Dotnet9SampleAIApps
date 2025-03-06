@@ -2,16 +2,16 @@ using Microsoft.ML.Data;
 
 namespace UserBehaviorAPI.Models;
 
-public class UserBehaviorData
+public record UserBehaviorData
 {
     [LoadColumn(0)] 
-    public float UserId;
+    public float UserId{ get; set; }
     [LoadColumn(1)] 
-    public float Age;
+    public float Age { get; set; }
     [LoadColumn(2)] 
-    public float PageViews;
+    public float PageViews { get; set; }
     [LoadColumn(3)] 
-    public float TimeSpent;
+    public float TimeSpent { get; set; }
     [LoadColumn(4)] 
-    public bool ClickedAd;
+    public bool ClickedAd { get; set; }
 }
