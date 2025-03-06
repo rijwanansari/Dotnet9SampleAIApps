@@ -9,7 +9,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 //add user behavior services
 builder.Services.AddSingleton<UserBehaviorModelTrainer>();
-builder.Services.AddSingleton<UserBehaviorModelPrediction>();
+builder.Services.AddSingleton<UserBehaviorPredict>();
 
 var app = builder.Build();
 

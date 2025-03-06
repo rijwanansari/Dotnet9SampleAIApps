@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UserBehaviorAPI.Models;
 using UserBehaviorAPI.Services;
@@ -22,7 +21,7 @@ namespace UserBehaviorAPI.Controllers
         [HttpPost("predict")]
         public IActionResult Predict([FromBody]UserBehaviorData userBehaviorData)
         {
-            var userBehaviorModelPrediction = new UserBehaviorModelPrediction();
+            var userBehaviorModelPrediction = new UserBehaviorPredict();
             var prediction = userBehaviorModelPrediction.Predict(userBehaviorData);
             return Ok(prediction);
         }
