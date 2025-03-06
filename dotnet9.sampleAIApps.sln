@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserBehaviorPrediction", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserBehaviorBlazor", "UserBehaviorPrediction\UserBehaviorBlazor\UserBehaviorBlazor.csproj", "{402219D4-086D-4F1B-927D-D3BED5048F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserBehaviorAPI", "UserBehaviorPrediction\UserBehaviorAPI\UserBehaviorAPI.csproj", "{28475782-5758-4CFD-8FDA-9EC0C5998729}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{402219D4-086D-4F1B-927D-D3BED5048F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{402219D4-086D-4F1B-927D-D3BED5048F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{402219D4-086D-4F1B-927D-D3BED5048F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28475782-5758-4CFD-8FDA-9EC0C5998729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28475782-5758-4CFD-8FDA-9EC0C5998729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28475782-5758-4CFD-8FDA-9EC0C5998729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28475782-5758-4CFD-8FDA-9EC0C5998729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +44,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{402219D4-086D-4F1B-927D-D3BED5048F08} = {95C4AE2B-545B-949C-7842-D6504EBF890D}
+		{28475782-5758-4CFD-8FDA-9EC0C5998729} = {95C4AE2B-545B-949C-7842-D6504EBF890D}
 	EndGlobalSection
 EndGlobal
